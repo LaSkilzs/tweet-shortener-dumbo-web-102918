@@ -38,7 +38,7 @@ def bulk_tweet_shortener(array)
 end
 
 
-def selective_tweet_shortener(string)
+def selective_tweet_shortener
   if string.count > 140 
     return word_substituter(string)
   else
