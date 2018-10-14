@@ -10,7 +10,6 @@ def dictionary
   }
 end
 
-
 def word_substituter(string)
   string_array = string.split(" ")
   dictionary_keys = []
@@ -32,12 +31,15 @@ def word_substituter(string)
   string_array.join(" ")
 end
 
-
 def bulk_tweet_shortener(array)
   array.each{|string| puts word_substituter(string)}
 end
 
-
 def selective_tweet_shortener(string)
   string.length > 140 ? word_substituter(string) : string
+end
+
+def shortened_tweet_truncator(string)
+  new_string = selective_tweet_shortener(string)
+  new_string.length > 140 ? new_string[0..137] : new_string
 end
