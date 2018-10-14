@@ -39,5 +39,9 @@ end
 
 
 def selective_tweet_shortener(string)
-  string.count > 140 ? word_substituter(string) : string
+  if string.count > 140 
+    return word_substituter(string)
+  else
+    return string
+  end
 end
